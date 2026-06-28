@@ -88,7 +88,7 @@ Includes:
 # 🏗️ System Architecture
 
 ```
-Prescription Image
+Prescription Image/Medical Notes
         │
         ▼
  Image Preprocessing
@@ -138,31 +138,29 @@ Entities      Validation
 # 📂 Project Structure
 
 ```
-MedGuard-AI/
+Medical-Prescription-AI/
 │
-├── models/
-│   ├── BioBERT
-│   ├── FLAN-T5
-│   └── TrOCR
+├── backend/
+│   ├── app.py
+│   ├── medical_prescription_v8.py
+│   ├── pipeline.py
+│   ├── metrics_dashboard_v8.py
+│   ├── requirements.txt
+│   ├── _drug_db_stub.json
+│   ├── __pycache__/
+│   └── venv/
 │
-├── dataset/
-│
-├── knowledge_base/
-│   ├── drug_database.json
-│   ├── dosage_rules.json
-│   └── interactions.json
-│
-├── images/
-│
-├── notebooks/
-│
-├── outputs/
-│
-├── utils/
-│
-├── main.py
-├── requirements.txt
-└── README.md
+└── frontend/
+    ├── public/
+    ├── src/
+    ├── node_modules/
+    ├── .gitignore
+    ├── eslint.config.js
+    ├── index.html
+    ├── package.json
+    ├── package-lock.json
+    ├── README.md
+    └── vite.config.js
 ```
 
 ---
