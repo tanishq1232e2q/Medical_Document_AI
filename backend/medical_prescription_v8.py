@@ -1,24 +1,3 @@
-"""
-Medical Prescription AI — v8
-======================================================
-FIXES over v7:
-  FIX 1: Entity extraction junk ('amlo','losm') → fuzzy match only adds
-          if edit-distance ≥ 5 AND word len ≥ 6 AND not already in NER output
-  FIX 2: Symptom extraction improved — multi-word symptoms ('knee pain',
-          'chest pain', 'shortness of breath') extracted correctly
-  FIX 3: Test/Investigation keywords expanded (HbA1c, eGFR, INR, Echo, etc.)
-  FIX 4: LLM-only accuracy 60%→85%+ via:
-          (a) Richer few-shot examples covering novel drug edge cases
-          (b) Chain-of-thought reasoning in prompt
-          (c) Smarter suppression gate — only suppress when truly safe
-          (d) 2nd LLM pass for uncertain cases
-  FIX 5: OCR medication name extraction — post-process with strict drug regex
-          to strip noise chars (~, +, numbers) before entity matching
-  FIX 6: Frequency conflict — OCR noise guard tightened: requires ≥2
-          distinct *known* frequency tokens AND a known drug name
-  FIX 7: Medication dedup — normalise before dedup to avoid 'amlo'+'Amlodipine'
-  FIX 8: Correct dosage in Entities — show per-drug dosage grouping
-"""
 
 # ── AUTO-INSTALL ──────────────────────────────────────────────────────────────
 import subprocess, sys, os
